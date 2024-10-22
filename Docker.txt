@@ -1,0 +1,24 @@
+### Для удаления всего ###
+docker system prune -a --volumes
+############################
+
+docker run $name --- Создание нового контейнера
+docker run -d $name --- Запуск контейнера в фоново режиме
+docker run --rm -d $name | docker kill $name --- После остановки контейнера он уничтожается
+docker ps --- Посмортеть процессы
+docker ps -a --- Посмореть все, даже скрытые процессы 
+docker rm --- Удаление контейнера(name or id)
+docker rmi --- Удаление образа
+docker images --- Список всех собраных образов
+docker pull --- Скачать образ с DockerHub
+docker run -d $image --- Запустить образ с доступом к консоли
+docker start $id --- Запуск уже сработавшего контейнера
+docker pause $id --- Заморозить контейнер
+docker unpause $id --- Разморозить контейнер
+docker stop $id $name --- Остановить контейнер
+docker kill $id $name --- Убить процесс(Без ожидания)
+docker inspect $name --- Информация о контейнере
+docker stats $name --- Информация о ресурсах контейнера
+docker logs -f(Постоянный лог)$name ---- Посмотреть последние логи контейнера
+docker exec -it $name /bin/bash --- Открытие консоли в контейнере
+docker exec -it $name $command --- Выполнить команду внутри контейнера
